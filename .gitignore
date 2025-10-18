@@ -1,0 +1,20 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.ruff_cache/
+
+# Virtual environments
+.venv
+SCRATCH.md
+
+# Environment variables and secrets
+.env
+app_urls.txt
+
+# Results and logs
+streamlit_exploration_results.json
+cron.log
