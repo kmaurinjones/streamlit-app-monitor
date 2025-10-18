@@ -8,7 +8,7 @@ Features:
 - Detects if apps are asleep by checking for wakeup button
 - Automatically clicks wakeup button for sleeping apps
 - Sends detailed email reports with timestamps
-- Runs in headless mode (suitable for cron/scheduling)
+- Runs in headless mode (suitable for scheduling)
 """
 
 # Standard library imports

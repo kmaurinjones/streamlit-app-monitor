@@ -9,7 +9,7 @@ Automated monitoring script that keeps your Streamlit apps awake by detecting sl
 - Automatically wakes up sleeping apps
 - Sends email reports after each check
 - Timezone-aware timestamps (EDT/EST)
-- Designed for scheduled execution (cron/systemd)
+- Designed for scheduled execution
 
 ## How It Works
 
@@ -80,24 +80,6 @@ https://your-app3.streamlit.app/
 ```bash
 uv run python streamlit_app_monitor.py
 ```
-
-## Scheduling
-
-### On Raspberry Pi (cron)
-
-Edit crontab:
-```bash
-crontab -e
-```
-
-Add this line to run at 6am, 12pm, and 6pm daily:
-```cron
-0 6,12,18 * * * cd /path/to/keep-streamlit-apps-alive && uv run python streamlit_app_monitor.py >> cron.log 2>&1
-```
-
-### On macOS/Linux (systemd)
-
-Create a timer unit or use cron similar to Raspberry Pi.
 
 ## Email Report Format
 
