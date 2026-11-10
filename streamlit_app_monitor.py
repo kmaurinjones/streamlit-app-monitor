@@ -14,6 +14,7 @@ Features:
 # Standard library imports
 import os
 import smtplib
+import ssl
 from datetime import datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -244,7 +245,7 @@ def send_email_report(results: list[dict], completion_time: datetime):
         # Connect to Gmail SMTP server
         print("\n→ Sending email report...")
         server = smtplib.SMTP('smtp.gmail.com', 587)
-        server.starttls()
+        server.starttls(context=ssl.create_default_context())
         server.login(gmail_user, gmail_app_password)
 
         # Send email
